@@ -37,20 +37,38 @@
 
 // Trying the Math.random
 
-const min=1;
-const max=6;
+// const min=1;
+// const max=6;
 // console.log(Math.random())
 // console.log(Math.random()*(max-min+1))
 // console.log(Math.random()*(max-min+1)+1)
 // console.log(Math.floor(Math.random()*(max-min+1)+1))
 
 // =====================================================================
-const arr1=[9,8,7,6,5,4]
-const arr2=[9,8,7,6,5,4]
-console.log(arr1)
-console.log("Slice:"+arr1.slice(0,3))
-console.log(arr1)
-console.log("***********************************")
-console.log(arr2)
-console.log("Splice:"+arr2.splice(0,3))
-console.log(arr2)
+// const arr1=[9,8,7,6,5,4]
+// const arr2=[9,8,7,6,5,4]
+// console.log(arr1)
+// console.log("Slice:"+arr1.slice(0,3))
+// console.log(arr1)
+// console.log("***********************************")
+// console.log(arr2)
+// console.log("Splice:"+arr2.splice(0,3))
+// console.log(arr2)
+
+
+// ============================================================================
+// Need to practise, Array.of, Array.from, Array.isArray 
+
+
+//Array.of returns a new array containing the elements that were given as arguments
+// const var1=5
+// const var2=15
+// const var3=25
+// const arr=Array.of(var1,var2,var3)
+// console.log(arr)
+
+// const arr=Array.from("Waris")
+// console.log(arr)
+
+
+
