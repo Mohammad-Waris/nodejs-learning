@@ -70,5 +70,51 @@
 // const arr=Array.from("Waris")
 // console.log(arr)
 
+// ===================================================================================
+// Objects 
+
+// const jsUser={
+//     name:"Waris",
+//     email:"waris123@gmail.com",
+//     gender:"male",
+//     location:"Lucknow",
+// }
+// // console.log(jsUser)
+// console.log(jsUser.email)
+// console.log(jsUser["email"])
+// //now freeze option will not allow to change the value inside the object earlier also it never did when you're in strict mode
+// Object.freeze(jsUser)
+// jsUser.email="notwaris123@gmail.com"
+// console.log(jsUser.email)
+
+
+// const obj1={
+//     name1:"Waris",
+//     age1:23
+// }
+// const obj2={
+//     name2:"Chandan",
+//     age:23
+// }
+
+// const obj3={...obj1,...obj2}
+// // console.log(obj3)
+// console.log(Object.keys(obj3))
+// console.log(Object.values(obj3))
+// console.log(Object.entries(obj3))
+
+// =============================================================================
+//Destructuring of Object
+const obj={
+    name:"waris",
+    age:22,
+    subject:"javascript",
+    gender:"male"
+}
+
+const {name,age}=obj;
+// console.log(name)
+const{subject:sub}=obj;
+console.log(sub)
 
 
