@@ -105,16 +105,46 @@
 
 // =============================================================================
 //Destructuring of Object
-const obj={
-    name:"waris",
-    age:22,
-    subject:"javascript",
-    gender:"male"
-}
+// const obj={
+//     name:"waris",
+//     age:22,
+//     subject:"javascript",
+//     gender:"male"
+// }
 
-const {name,age}=obj;
-// console.log(name)
-const{subject:sub}=obj;
-console.log(sub)
+// const {name,age}=obj;
+// // console.log(name)
+// const{subject:sub}=obj;
+// console.log(sub)
 
+// ====================================================================
+// Functions 
 
+//Basic function
+// console.log(add(21,28));
+// function add(num1,num2){
+//     return num1+num2;
+// }
+
+//can't use add2 before declaration because we are basically storing the function into a variable named add2. We can't access any variable before it's declaration
+// console.log(add2(28,21));
+// const add2=function(num1,num2){
+//     return num1+num2;
+// }
+// console.log(add2(28,21));
+
+//Using Arrow function
+// const arrow=(num1,num2)=>{
+//     return num1+num2;
+// }
+// console.log("Using arrow")
+// console.log(arrow(21,28));
+
+//returning without return statement
+// const fun=(num1,num2)=>(num1+num2);
+// console.log(fun(21,28))
+
+//IIFE
+(function(){
+    console.log("Hey this is IFEE")
+})();
