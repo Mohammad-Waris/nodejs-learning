@@ -145,6 +145,21 @@
 // console.log(fun(21,28))
 
 //IIFE
-(function(){
-    console.log("Hey this is IFEE")
-})();
+// (function(){
+//     console.log("Hey this is IFEE")
+// })();
+
+
+// =============================================
+// Nullish Coalising Operator ??
+// Different from Ternary operator ?
+
+const var1=5??10
+const var2=null??10
+const var3=undefined??15
+const var4=null??undefined??""
+
+console.log(var1)
+console.log(var2)
+console.log(var3)
+console.log(var4)
