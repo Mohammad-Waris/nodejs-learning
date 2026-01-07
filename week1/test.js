@@ -10,13 +10,13 @@
 // console.log(temporary);
 // console.log(typeof temporary)
 
-//Note that the 
-//only string like "123" can be converted to Number 
+//Note that the
+//only string like "123" can be converted to Number
 // "123abc" results in NaN
 //"" also results in Nan
 //"true/false" can be converted to 1/0
 
-//== and === works differently 
+//== and === works differently
 
 // ====================================================
 //Primitive uses stack whereas Non-Primitive uses heaps
@@ -33,7 +33,6 @@
 // userTwo.email="chandan123@gmail.com"
 // console.log("Printing email of userOne")
 // console.log("User One "+userOne.email);
-
 
 // Trying the Math.random
 
@@ -55,10 +54,8 @@
 // console.log("Splice:"+arr2.splice(0,3))
 // console.log(arr2)
 
-
 // ============================================================================
-// Need to practise, Array.of, Array.from, Array.isArray 
-
+// Need to practise, Array.of, Array.from, Array.isArray
 
 //Array.of returns a new array containing the elements that were given as arguments
 // const var1=5
@@ -71,7 +68,7 @@
 // console.log(arr)
 
 // ===================================================================================
-// Objects 
+// Objects
 
 // const jsUser={
 //     name:"Waris",
@@ -86,7 +83,6 @@
 // Object.freeze(jsUser)
 // jsUser.email="notwaris123@gmail.com"
 // console.log(jsUser.email)
-
 
 // const obj1={
 //     name1:"Waris",
@@ -118,7 +114,7 @@
 // console.log(sub)
 
 // ====================================================================
-// Functions 
+// Functions
 
 //Basic function
 // console.log(add(21,28));
@@ -149,17 +145,89 @@
 //     console.log("Hey this is IFEE")
 // })();
 
-
 // =============================================
 // Nullish Coalising Operator ??
 // Different from Ternary operator ?
 
-const var1=5??10
-const var2=null??10
-const var3=undefined??15
-const var4=null??undefined??""
+// const var1=5??10
+// const var2=null??10
+// const var3=undefined??15
+// const var4=null??undefined??""
 
-console.log(var1)
-console.log(var2)
-console.log(var3)
-console.log(var4)
+// console.log(var1)
+// console.log(var2)
+// console.log(var3)
+// console.log(var4)
+
+// ======================================================================
+// Using high order loops
+
+//using of for-of loop
+// const arr=[1,2,3,4,5]
+// for(const i of arr){
+//     console.log(i);
+// }
+// const str="Waris"
+// for(const i of str){
+//     console.log(i)
+// }
+
+//Maps are iterable but objects aren't
+// const map=new Map();
+// map.set("A","War")
+// map.set("B","Wari")
+// map.set("C","Waris")
+
+// console.log(map)
+
+// for(const mp of map){
+//     console.log(mp)
+// }
+
+// for (const [key,value] of map){
+//     console.log(key+" -> "+value)
+// }
+
+//for in is used for objects
+
+const obj = {
+  name: "Waris",
+  age: 23,
+  subject: "javascript",
+};
+
+// for(const key in obj){
+//     console.log(key);
+// }
+
+// for printing values of keys
+// for(const key in obj){
+//     console.log(`${key} has value : ${obj[key]}`);
+// }
+
+// Using forEach for array
+// const arr = ["a", "b", "c", "d", "e", "f"];
+// arr.forEach((item, idx) => {
+//   console.log(item, idx);
+// });
+
+
+//traversed easily on array of objects
+const arr2 = [
+  {
+    lang: "javascript",
+    extension: "js",
+  },
+  {
+    lang: "python",
+    extension: "py",
+  },
+  {
+    lang: "c++",
+    extension: "cpp",
+  },
+];
+
+arr2.forEach((item)=>{
+    console.log(`${item.lang} has value ${item.extension}`)
+})
