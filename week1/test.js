@@ -211,23 +211,40 @@ const obj = {
 //   console.log(item, idx);
 // });
 
-
 //traversed easily on array of objects
-const arr2 = [
-  {
-    lang: "javascript",
-    extension: "js",
-  },
-  {
-    lang: "python",
-    extension: "py",
-  },
-  {
-    lang: "c++",
-    extension: "cpp",
-  },
-];
+// const arr2 = [
+//   {
+//     lang: "javascript",
+//     extension: "js",
+//   },
+//   {
+//     lang: "python",
+//     extension: "py",
+//   },
+//   {
+//     lang: "c++",
+//     extension: "cpp",
+//   },
+// ];
 
-arr2.forEach((item)=>{
-    console.log(`${item.lang} has value ${item.extension}`)
-})
+// arr2.forEach((item)=>{
+//     console.log(`${item.lang} has value ${item.extension}`)
+// })
+
+const arr = [1, 2, 3, 4, 5];
+//filter is basically used for conditioning
+// const newArr=arr.filter((item)=>{
+//   return item>3
+// })
+// console.log(newArr)
+
+const newArr2 = arr.map((item) => {
+  return item * 10;
+});
+console.log(newArr2);
+
+console.log(
+  arr.reduce((acc, item) => {
+    return acc + item;
+  }, 0) 
+);
