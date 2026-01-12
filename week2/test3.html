@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+</head>
+<body style="background-color: #212121;color: white;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    function createLanguage(getlanguage){
+        const parent=document.querySelector('.language');
+        const li=document.createElement('li');
+        li.appendChild(document.createTextNode(getlanguage));
+        parent.appendChild(li);
+    }
+    createLanguage("Java")
+    createLanguage("CPP")
+
+    //Edit the list
+    const secondLang=document.querySelector('li:nth-child(2)');
+    //selected the second List item
+    const li=document.createElement('li');
+    li.appendChild(document.createTextNode('Python'));
+    //replace the second list item with newly created item
+    secondLang.replaceWith(li)
+
+    //removing element
+    const lastElt=document.querySelector('li:last-child')
+    lastElt.remove()
+</script>
+</html>
