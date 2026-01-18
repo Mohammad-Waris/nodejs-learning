@@ -22,5 +22,4 @@ form.addEventListener('submit',(e)=>{
         else    
             results.innerHTML=`${bmi} <br>You're overweight go to gym fat!`
     }
-
 });
