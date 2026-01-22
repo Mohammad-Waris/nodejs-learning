@@ -1,4 +1,4 @@
-const random = parseInt(Math.random() * 100 + 1);
+let random = parseInt(Math.random() * 100 + 1);
 const submit = document.getElementById("subt");
 const userInput = document.getElementById("guessField");
 const guessSlot = document.querySelector(".guesses");
@@ -26,14 +26,13 @@ function validateGuess(guess) {
   else if (guess < 1 || guess > 100) alert("Enter number withing the range");
   else {
     prevGuess.push(guess);
-    if (numGuess == 11) {
+    if (numGuess == 10) {
       displayGuess(guess);
-      displayMessage(`Game over. Last Guess was ${random}`);
+      displayMessage(`Game over. The number was ${random}`);
       endGame();
     } else {
       displayGuess(guess);
       checkGuess(guess);
-      numGuess++;
     }
   }
 }
@@ -51,17 +50,39 @@ function checkGuess(guess) {
 
 //for displaying the message
 function displayMessage(message) {
-  loworHi.innerHTML(`<h2>${message}</h2>`)
+  loworHi.innerHTML=`<h2>${message}</h2>`
 }
 
 //displaying the guess
 function displayGuess(guess) {
   userInput.value=''
-  guessSlot.innerHTML+=`${guess}`
+  guessSlot.innerHTML+=`${guess} `
   numGuess++
-  remaining.innerHTML(`${11-numGuess}`)
+  remaining.innerHTML=`${11-numGuess}`
 }
 
-function endGame() {}
+function endGame() {
+userInput.value=''
+userInput.setAttribute('disabled','')
+p.classList.add('button')
+p.innerHTML=`<h2 id="newGame">Start new Game</h2>`
+startOver.appendChild(p)
+playGame=false;
+newGame()
+}
 
-function newGame() {}
+function newGame() {
+  const newGameButton=document.querySelector('#newGame')
+  newGameButton.addEventListener('click',(e)=>{
+    e.preventDefault()
+    random=parseInt(Math.random() * 100 + 1);
+    prevGuess=[]
+    numGuess=0;
+    guessSlot.innerHTML='';
+    remaining.innerHTML='10';
+    loworHi.innerHTML=''
+    userInput.removeAttribute('disabled')
+    startOver.removeChild(p);
+    playGame=true;
+  })
+}
